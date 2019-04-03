@@ -1,0 +1,86 @@
+snippet rct_fun "React Stateless Functional Component"
+import React from 'react';
+
+const ${1:Component} = (props) => {
+$2
+	return (
+		$3
+	);
+};
+
+export default $1;
+endsnippet
+
+snippet rct_styled "React Styled Component"
+import styled from 'styled-components';
+
+const ${1:Component} = styled${2:.div}\`
+	$3
+\`;
+
+export default $1;
+endsnippet
+
+snippet rct_class "React Component"
+import React from 'react';
+
+class ${1:Component} extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			$2
+		};
+
+		${3:this.${4:method} = this.$4.bind(this);}
+	}
+	${5:
+	$4($6) {
+		$7
+	}
+	}
+	render() {
+		$8
+		return (
+			$9
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rct_hoc "React Higher Order Component"
+import React from 'react';
+
+const $1 = (WrappedComponent${2:, { $3 }}) => (
+	class ${4:Component} extends React.Component {
+		constructor(props) {
+			super(props);
+
+			this.state = {
+				$5
+			};
+
+			${6:this.${7:method} = this.$7.bind(this);}
+		}
+		${8:
+		$7($9) {
+			$10
+		}
+		}
+		render() {
+			$11
+			return (
+				<WrappedComponent
+					{...this.state}
+					{...this.props}
+					$12
+				/>
+			);
+		}
+	}
+);
+
+export default $1;
+endsnippet
