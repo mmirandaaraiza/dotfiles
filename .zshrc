@@ -40,6 +40,10 @@ add-zsh-hook -Uz precmd rehash_precmd
 #unalias run-help
 #alias help=run-help
 
+# case insensitive completion, _ and - are not interchangeable
+unset CASE_SENSITIVE HYPHEN_INSENSITIVE
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
 # zsh uses ZLE, this has an emacs and a vi mode
 # by default, emaps mode is used but this can change
 # if editor env variable has 'vi' or by setting it explicitly here

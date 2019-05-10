@@ -4,13 +4,6 @@
 
 "TODO make it work with modern javascript, it only works for normal functions
 
-"jsRegexpString = regex string
-
-"jsGlobalNodeObjects = require
-
-"jsComment = comment
-
-
 "--------------------------PLUGINS-----------------------------------------"
 
 " Required vundle configuration
