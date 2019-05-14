@@ -192,9 +192,14 @@ bindsym Shift+Print exec "maim -s | xclip -selection clipboard -t image/png"
 #bindsym Shift+Print exec ~/.config/i3/record-screen.sh ogv
 
 # multimedia keys amixer
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# multimedia keys pulseaudio
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # screen brightness
 bindsym XF86MonBrightnessUp exec light -A 10
