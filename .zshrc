@@ -41,6 +41,7 @@ add-zsh-hook -Uz precmd rehash_precmd
 #alias help=run-help
 
 # case insensitive completion, _ and - are not interchangeable
+# regex comes from github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
 unset CASE_SENSITIVE HYPHEN_INSENSITIVE
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
