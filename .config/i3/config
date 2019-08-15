@@ -47,7 +47,7 @@ bindsym $mod+x kill
 # start dmenu (a program launcher)
 # changed to match vim ctrl p
 #bindsym $mod+p exec dmenu_run
-bindsym $mod+p exec "rofi -combi-modi window,drun,ssh -show combi"
+bindsym $mod+p exec "rofi -combi-modi window,drun,ssh -theme solarized -show combi"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
