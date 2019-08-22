@@ -40,15 +40,23 @@ add-zsh-hook -Uz precmd rehash_precmd
 #unalias run-help
 #alias help=run-help
 
-# case insensitive completion, _ and - are not interchangeable
 # regex comes from github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
-unset CASE_SENSITIVE HYPHEN_INSENSITIVE
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+# case insensitive completion, _ and - are not interchangeable
+#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+# case insensitive completion, _ and - are interchangeable
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 
 # zsh uses ZLE, this has an emacs and a vi mode
 # by default, emaps mode is used but this can change
 # if editor env variable has 'vi' or by setting it explicitly here
 bindkey -v
+
+# key bindings for fzf
+# ctrl + t lists files and directories under current directory
+# ctrl + r searches history of shell commands
+# alt + c change directory through fuzzy finding
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # aliases
 alias ls='ls --color=auto'

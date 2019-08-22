@@ -4,3 +4,12 @@
 # arch wiki has $path[@] at the end
 typeset -U path
 path=(~/.local/bin $path)
+
+# command line history
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
+# needed for completion
+HYPHEN_INSENSITIVE="true"
+unset CASE_SENSITIVE

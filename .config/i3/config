@@ -202,7 +202,11 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
-# screen brightness
+# screen brightness xbacklight
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+# screen brightness light
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
