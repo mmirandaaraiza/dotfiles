@@ -10,6 +10,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
-# needed for completion
+# command completion
 HYPHEN_INSENSITIVE="true"
 unset CASE_SENSITIVE

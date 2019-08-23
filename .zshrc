@@ -10,8 +10,17 @@ prompt redhat
 # autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 
-# autocompletion searches official repositories when
-# command is not found, pkgfile must be installed
+# regex comes from github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
+# case insensitive completion, _ and - are not interchangeable
+#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+# case insensitive completion, _ and - are interchangeable
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+
+# completion of command line switches for aliases
+setopt COMPLETE_ALIASES
+
+# autocompletion can search official repositories when a command isnt found
+# pkgfile must be installed
 # source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # compinit will not automatically find new executables in $PATH
@@ -40,18 +49,13 @@ add-zsh-hook -Uz precmd rehash_precmd
 #unalias run-help
 #alias help=run-help
 
-# regex comes from github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
-# case insensitive completion, _ and - are not interchangeable
-#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-# case insensitive completion, _ and - are interchangeable
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
-
 # zsh uses ZLE, this has an emacs and a vi mode
-# by default, emaps mode is used but this can change
+# by default, emacs mode is used but this can be changed
 # if editor env variable has 'vi' or by setting it explicitly here
 bindkey -v
 
 # key bindings for fzf
+# this must come after the keybindings for vi mode
 # ctrl + t lists files and directories under current directory
 # ctrl + r searches history of shell commands
 # alt + c change directory through fuzzy finding
