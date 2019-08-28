@@ -64,3 +64,6 @@ source /usr/share/fzf/completion.zsh
 
 # aliases
 alias ls='ls --color=auto'
+# noglob is needed because zsh uses square brackets for globbing
+alias pip='noglob pip'
+alias pipenv='noglob pipenv'
