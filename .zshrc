@@ -67,3 +67,4 @@ alias ls='ls --color=auto'
 # noglob is needed because zsh uses square brackets for globbing
 alias pip='noglob pip'
 alias pipenv='noglob pipenv'
+alias diff='diff -qr --left-column --color=always'
