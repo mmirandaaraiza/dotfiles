@@ -1,3 +1,5 @@
 [user]
 	name = Miguel Miranda
-	email = miguel@mirandamiguel.com
+	email = mmirandaaraiza@gmail.com
+[core]
+	editor = nvim
