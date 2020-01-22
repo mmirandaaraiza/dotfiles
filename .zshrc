@@ -62,8 +62,15 @@ bindkey -v
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+# fish syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# command not found handler
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 # aliases
 alias ls='ls --color=auto'
+alias history='history 0'
 # noglob is needed because zsh uses square brackets for globbing
 alias pip='noglob pip'
 alias pipenv='noglob pipenv'
