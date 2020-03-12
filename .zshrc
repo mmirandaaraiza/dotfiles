@@ -49,6 +49,9 @@ add-zsh-hook -Uz precmd rehash_precmd
 #unalias run-help
 #alias help=run-help
 
+# history includes a timestamp
+setopt extendedhistory
+
 # zsh uses ZLE, this has an emacs and a vi mode
 # by default, emacs mode is used but this can be changed
 # if editor env variable has 'vi' or by setting it explicitly here
