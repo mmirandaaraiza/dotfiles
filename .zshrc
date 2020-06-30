@@ -19,10 +19,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 # completion of command line switches for aliases
 setopt COMPLETE_ALIASES
 
-# autocompletion can search official repositories when a command isnt found
-# pkgfile must be installed
-# source /usr/share/doc/pkgfile/command-not-found.zsh
-
 # compinit will not automatically find new executables in $PATH
 # rehash allows it to happen automatically
 # so we need to set a pacman hook to keep a zsh cache file
@@ -69,6 +65,8 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # command not found handler
+# autocompletion can search official repositories when a command isnt found
+# pkgfile must be installed
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # aliases
