@@ -69,6 +69,13 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # pkgfile must be installed
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+# enable pyenv and pyenv-virtualenv
+# this will enable the use of pyenv local and automatically changing the env if it exists
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
 # aliases
 alias ls='ls --color=auto'
 alias history='history 0'

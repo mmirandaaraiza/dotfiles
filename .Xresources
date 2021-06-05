@@ -1,7 +1,7 @@
 URxvt.font: xft:Source Code Pro:style=Regular:size=12
 
 !Keeping it here because commmand can be used while a program runs
-URxvt.keysym.Control-l: echo -ne '\\033c'\n
+!URxvt.keysym.Control-l: echo -ne '\\033c'\n
 !URxvt.keysym.Control-l: command:\033c
 
 !Not using Perl extensions so disable them to improve security and speed
