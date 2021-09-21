@@ -1,4 +1,4 @@
-URxvt.font: xft:Source Code Pro:style=Regular:size=12
+URxvt.font: xft:Source Code Pro:style=Regular:size=14
 
 !Keeping it here because commmand can be used while a program runs
 !URxvt.keysym.Control-l: echo -ne '\\033c'\n

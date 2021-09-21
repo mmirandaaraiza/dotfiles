@@ -19,6 +19,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 # completion of command line switches for aliases
 setopt COMPLETE_ALIASES
 
+# history includes a timestamp
+setopt extendedhistory
+
 # compinit will not automatically find new executables in $PATH
 # rehash allows it to happen automatically
 # so we need to set a pacman hook to keep a zsh cache file
@@ -44,9 +47,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 #autoload -Uz run-help
 #unalias run-help
 #alias help=run-help
-
-# history includes a timestamp
-setopt extendedhistory
 
 # zsh uses ZLE, this has an emacs and a vi mode
 # by default, emacs mode is used but this can be changed
