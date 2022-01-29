@@ -51,5 +51,6 @@ fi
 #xrandr --output HDMI-1 --mode 1920x1080 &
 #~/.fehbg &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/dunst &
 exec i3
 
