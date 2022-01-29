@@ -4,17 +4,14 @@ export ANDROID_HOME=$HOME/Android/Sdk
 # directories can be added in from of $path, however to avoid duplicates
 # from the globally set PATH, the incantation typeset -U path is used
 # arch wiki has $path[@] at the end
-typeset -U path
-path=($ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools ~/.local/bin $path)
+typeset -U PATH path
+path=("$ANDROID_HOME/emulator" "$ANDROID_HOME/tools" "$ANDROID_HOME/tools/bin" "$ANDROID_HOME/platform-tools" "$HOME/.local/bin" "$path[@]")
 export PATH
 
-# command line history
-HISTFILE=~/.zsh_history
-HISTSIZE=999999999
-SAVEHIST=$HISTSIZE
+# history
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=10000
 
-# command completion
-HYPHEN_INSENSITIVE="true"
-unset CASE_SENSITIVE
-
+# directory to install global packages for the current user
 export npm_config_prefix=$HOME/.local
