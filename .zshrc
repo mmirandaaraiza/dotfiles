@@ -70,6 +70,9 @@ source /usr/share/fzf/completion.zsh
 # fish syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# fish auto suggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # command not found handler
 # autocompletion can search official repositories when a command isnt found
 # pkgfile must be installed
@@ -82,3 +85,4 @@ alias history='history 0'
 alias pip='noglob pip'
 alias pipenv='noglob pipenv'
 alias diff='diff -qr --left-column --color=always'
+alias feh='feh -F'
