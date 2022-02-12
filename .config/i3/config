@@ -44,7 +44,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use flameshot to take screenshots
-bindsym Print exec "flameshot gui -p ~/Screenshots"
+bindsym Print exec "flameshot gui"
 bindsym Shift+Print exec "flameshot screen -p ~/Screenshots"
 bindsym Control+Print exec "flameshot screen -c"
 
