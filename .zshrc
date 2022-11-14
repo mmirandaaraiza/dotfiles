@@ -21,11 +21,11 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 # if editor env variable has 'vi' or by setting it explicitly here
 bindkey -v
 
-# fish auto suggestions
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # fish syntax highlighting
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# fish auto suggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # aliases
 alias ls='ls --color=auto'
