@@ -4,8 +4,8 @@ export ANDROID_HOME=$HOME/Android/Sdk
 # directories can be added in from of $path, however to avoid duplicates
 # from the globally set PATH, the incantation typeset -U path is used
 # arch wiki has $path[@] at the end
-typeset -U PATH path
-path=("$ANDROID_HOME/emulator" "$ANDROID_HOME/tools" "$ANDROID_HOME/tools/bin" "$ANDROID_HOME/platform-tools" "$path[@]")
+typeset -U path PATH
+path=("$ANDROID_HOME/emulator" "$ANDROID_HOME/platform-tools" $path)
 export PATH
 
 # history

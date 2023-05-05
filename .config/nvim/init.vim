@@ -1,12 +1,12 @@
 "--------------------------PLUGINS-----------------------------------------"
-call plug#begin()
-Plug 'tpope/vim-vinegar'
+"call plug#begin()
+"Plug 'tpope/vim-vinegar'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim'
-call plug#end()
+"call plug#end()
 
 "--------------------------KEYMAPS-----------------------------------------"
 " maps , to placeholder <leader>
@@ -73,3 +73,6 @@ set splitright
 
 " indentation uses spaces instead of tabs
 set ts=2 sts=2 sw=2 expandtab
+
+" copy to clipboard always
+set clipboard+=unnamedplus
